@@ -1,16 +1,17 @@
-import { Button, makeStyles } from "@material-ui/core";
-import { Person } from "@material-ui/icons";
+import { makeStyles } from "@material-ui/core";
+import Navbar from "./components/Navbar";
 
 const useStyles = makeStyles((theme)=>({
-  button: {
-    color:"white",
-    backgroundColor: theme.palette.success.dark,
-  }
+
 }))
 
 const App = () => {
   const classes = useStyles()
-  return <Button variant='contained' size='large' startIcon={<Person />} className={classes.button}>Hello world!</Button>;
+  return(
+    <div>
+      <Navbar /> 
+    </div>
+  )
 };
 
 export default App;
