@@ -3,6 +3,7 @@ import {
   AppBar,
   Avatar,
   Badge,
+  Button,
   InputBase,
   makeStyles,
   Toolbar,
@@ -41,6 +42,7 @@ const useStyles = makeStyles((theme) => ({
       display: (props) => (props.open ? "flex" : "none"),
       width: "70%",
     },
+    padding: 5
   },
   input: {
     color: "white",
@@ -72,9 +74,11 @@ const Navbar = () => {
   return (
     <AppBar position="fixed">
       <Toolbar className={classes.toolbar}>
+      
         <Typography variant="h6" className={classes.logoLg}>
-          Lama Dev
+        <a href="/" > <p style={{textDecoration: 'underline', textDecorationColor: 'white', color: 'white'}}>Wais Ibrahim  </p></a> 
         </Typography>
+        
         <Typography variant="h6" className={classes.logoSm}>
           LAMA
         </Typography>
@@ -88,16 +92,9 @@ const Navbar = () => {
             className={classes.searchButton}
             onClick={() => setOpen(true)}
           />
-          <Badge badgeContent={4} color="secondary" className={classes.badge}>
-            <Mail />
-          </Badge>
-          <Badge badgeContent={2} color="secondary" className={classes.badge}>
-            <Notifications />
-          </Badge>
-          <Avatar
-            alt="Remy Sharp"
-            src="https://images.pexels.com/photos/8647814/pexels-photo-8647814.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
-          />
+          <Button color="primary" variant="contained" size="large">
+            Get In Touch
+          </Button>
         </div>
       </Toolbar>
     </AppBar>
