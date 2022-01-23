@@ -11,11 +11,14 @@ import {
 } from "@material-ui/core";
 import { Cancel, Mail, Notifications, Search } from "@material-ui/icons";
 import { useState } from "react";
+import { Link } from "react-router-dom"
 
 const useStyles = makeStyles((theme) => ({
   toolbar: {
     display: "flex",
     justifyContent: "space-between",
+    backgroundColor: 'grey',
+    padding: '4px 60px 4px 50px',
   },
   logoLg: {
     display: "none",
@@ -42,7 +45,8 @@ const useStyles = makeStyles((theme) => ({
       display: (props) => (props.open ? "flex" : "none"),
       width: "70%",
     },
-    padding: 5
+    padding: 5,
+    paddingLeft: 10,
   },
   input: {
     color: "white",
@@ -76,11 +80,11 @@ const Navbar = () => {
       <Toolbar className={classes.toolbar}>
       
         <Typography variant="h6" className={classes.logoLg}>
-        <a href="/" > <p style={{textDecoration: 'underline', textDecorationColor: 'white', color: 'white'}}>Wais Ibrahim  </p></a> 
+        <Link to="/" > <p style={{textDecoration: 'underline', textDecorationColor: 'white', color: 'white'}}>Wais Ibrahim  </p></Link> 
         </Typography>
         
         <Typography variant="h6" className={classes.logoSm}>
-          LAMA
+          Wais
         </Typography>
         <div className={classes.search}>
           <Search />

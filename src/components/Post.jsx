@@ -8,14 +8,15 @@ import {
   makeStyles,
   Typography,
 } from "@material-ui/core";
+import {Link} from "react-router-dom"
 
 const useStyles = makeStyles((theme) => ({
   card: {
     marginBottom: theme.spacing(5),
     "&:hover": {
-      boxShadow: "rgba(0, 0, 0, 0.25) 0px 20px 15px -12px",
+      boxShadow: "rgba(0, 0, 0, 0.25) 0px 15px 15px -12px",
     },
-    boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
+    boxShadow: "rgba(0, 0, 0, 0.10) 3px 2px 8px",
   },
   media: {
     height: 250,
@@ -25,10 +26,14 @@ const useStyles = makeStyles((theme) => ({
 
   },
   button: {
-    background: "#f1f1f1",
+    background: '',
+    color: '#2E76CF',
     '&:hover': {
-       background: "#ADD8E6",
+      background: theme.palette.primary.main,
+      color: 'white',
     },
+    margin: theme.spacing(1),
+    marginBottom: '10px',
     padding: 12,
     fontFamily: "Helvetica",
     fontWeight: "bold",
@@ -39,6 +44,7 @@ const useStyles = makeStyles((theme) => ({
 const Post = ({ img, title }) => {
   const classes = useStyles();
   return (
+    <Link to="/experience" >
     <Card className={classes.card}>
       <CardActionArea>
         <CardMedia className={classes.media} image={img} title="My Post" />
@@ -53,11 +59,12 @@ const Post = ({ img, title }) => {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary" className={classes.button}>
+         <Button size="small" className={classes.button}>
           Check out my work
         </Button>
       </CardActions>
     </Card>
+    </Link>
   );
 };
 
