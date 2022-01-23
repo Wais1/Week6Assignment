@@ -44,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
 const Post = ({ img, title }) => {
   const classes = useStyles();
   return (
-    <Link to="/experience" >
+    <Link to="/experience" style={{ textDecoration: 'none' }}>
     <Card className={classes.card}>
       <CardActionArea>
         <CardMedia className={classes.media} image={img} title="My Post" />

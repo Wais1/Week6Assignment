@@ -78,7 +78,6 @@ const Navbar = () => {
   return (
     <AppBar position="fixed">
       <Toolbar className={classes.toolbar}>
-      
         <Typography variant="h6" className={classes.logoLg}>
         <Link to="/" > <p style={{textDecoration: 'underline', textDecorationColor: 'white', color: 'white'}}>Wais Ibrahim  </p></Link> 
         </Typography>
@@ -96,6 +95,7 @@ const Navbar = () => {
             className={classes.searchButton}
             onClick={() => setOpen(true)}
           />
+          <Link to="/about"><Button variant="contained" color="inherit">About Me</Button></Link>
           <Button color="primary" variant="contained" size="large">
             Get In Touch
           </Button>

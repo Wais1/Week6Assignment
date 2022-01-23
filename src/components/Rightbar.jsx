@@ -78,9 +78,9 @@ const Rightbar = () => {
         </ImageListItem>
       </ImageList>
       <Typography className={classes.title} gutterBottom>
-        Categories
+        References
       </Typography>
-      <Link href="#" className={classes.link} variant="body2">
+      {/* <Link href="#" className={classes.link} variant="body2">
         Sport
       </Link>
       <Link href="#" className={classes.link} variant="body2">
@@ -98,7 +98,7 @@ const Rightbar = () => {
       </Link>
       <Link href="#" className={classes.link} variant="body2">
         Life
-      </Link>
+      </Link> */}
     </Container>
   );
 };

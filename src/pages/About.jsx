@@ -8,9 +8,12 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: theme.spacing(10),
   },
   intro: {
-    padding: '0px 0px 0px 0px',
+    padding: '15px 30px 120px 30px',
+    backgroundColor: 'gray',
     marginBottom: 20,
     margin: 'auto',
+    maxHeight: 500,
+    color: 'white',
   },
   img: {
     height: '100%',
@@ -30,24 +33,23 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-const Feed = () => {
+const About = () => {
   const classes = useStyles();
   return (
     <Container className={classes.container}>
       <Box className={classes.intro}>
-        <img className={classes.img} src="/img/Taco-banner.png" alt="" />
       </Box>
       <Link to="/"style={{ textDecoration: 'none' }}>
        <Button color="primary" className={classes.backButton} variant="contained" size="large"><ArrowBack className={classes.backIcon}/>Go Back</Button>
       </Link>
-      <a target="_blank" href="https://drive.google.com/file/d/1lyiSY6lrWUp53cEDtgxSOOe5JYFLTUOK/view"> <Button className={classes.backButton}>  <Videocam className={classes.backIcon}/> Watch</Button> </a>
-      <Typography gutterBottom variant="h4">Taco</Typography>
+      <Typography gutterBottom variant="h4">About Me</Typography>
       <Typography variant="subtitle1">App description</Typography>
       <Typography variant="subtitle1">Role: Product Owner</Typography>
       <Typography variant="subtitle1">Team members: 4 Coders, 2 designers</Typography>
-      <Typography variant="subtitle1">Tools used: Sketch, designers</Typography>
+      <Typography variant="subtitle1">Tools used: Sketch, Figma, XCode / Swift</Typography>
+      <Button color="primary" variant="contained" size="large">Contact Me</Button> <Button color="primary" variant="contained" size="large"> See My Projects!</Button>
     </Container>
   );
 };
 
-export default Feed;
+export default About;

@@ -1,4 +1,4 @@
-import { Container, makeStyles, Typography, Box } from "@material-ui/core";
+import { Container, makeStyles, Typography, Box, Button } from "@material-ui/core";
 import Post from "./Post";
 
 const useStyles = makeStyles((theme) => ({
@@ -26,6 +26,7 @@ const Feed = () => {
            in psychological safety and an empathetic work culture. I am open minded and attack problems with a naive mindset. I much working to work in teams, however I am capable of accomplishing work alone. 
            Take a look at my work :D</Typography>
         <Typography variant="body1">I created this portfolio with React and Material UI</Typography>
+        <Button>Learn more about me</Button> <Button> See My Projects!</Button>
       </Box>
       <Typography gutterBottom variant="h5">My Experience Projects</Typography>
       

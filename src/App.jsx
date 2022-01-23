@@ -2,6 +2,7 @@ import { Grid, makeStyles } from "@material-ui/core";
 import { render } from "react-dom";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Experience from "./pages/Experience";
+import About from "./pages/About";
 import Add from "./components/Add";
 import Feed from "./components/Feed";
 import Leftbar from "./components/Leftbar";
@@ -30,6 +31,7 @@ const App = () => {
                 <Routes> 
                   <Route path="/" element={<Feed />} />
                   <Route path="/experience" element={<Experience />} />
+                  <Route path="/about" element={<About />} />
                 </Routes>
               </Grid>
               <Grid item sm={3} className={classes.right}>
