@@ -26,7 +26,8 @@ const useStyles = makeStyles((theme) => ({
     padding: '15px 20px 15px 15px',
     '&:hover': {
       color: 'white'
-    }
+    },
+    marginBottom: 10,
   },
   backIcon: {
     paddingRight: 10,
@@ -53,6 +54,7 @@ const About = () => {
          creating applications. Explore my experience and add me to your journey! I  love and thrive in collaborative spaces and strongly believe
            in psychological safety and an empathetic work culture. I am open minded and attack problems with a naive mindset. I much working to work in teams, however I am capable of accomplishing work alone. 
            Take a look at my work :D</Typography>
+           <Typography variant="subtitle1">Books I've read: :D</Typography>
         <Link to="/contact" style={{ textDecoration: 'none' }}><Button color="primary" variant="contained" size="large" className={classes.actionButton}>Contact Me</Button></Link> 
         <Link to="/" style={{ textDecoration: 'none' }}><Button color="primary" variant="contained" size="large" className={classes.actionButton}> See My Projects!</Button></Link>
     </Container>

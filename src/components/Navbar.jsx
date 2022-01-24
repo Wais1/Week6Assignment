@@ -99,7 +99,7 @@ const Navbar = () => {
         </Typography>
         
         <Typography variant="h6" className={classes.logoSm}>
-          Wais
+        <Link to="/" style={{ textDecoration: 'none' }}> <p style={{color: 'white'}}>Wais</p></Link>
         </Typography>
         <div className={classes.search}>
           <Search />

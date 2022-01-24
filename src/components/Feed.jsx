@@ -33,11 +33,14 @@ const Feed = () => {
       <Typography gutterBottom variant="h5">My Experience Projects</Typography>
       
       <Post title="Taco" img="img/Taco-banner.png"/>
-      <Post title="Simply Recipes Less Stress. More Joy" img="https://images.pexels.com/photos/7363671/pexels-photo-7363671.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"/>
-      <Post title="What To Do In London" img="https://images.pexels.com/photos/7245535/pexels-photo-7245535.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"/>
-      <Post title="Recipes That Will Make You Crave More" img="https://images.pexels.com/photos/7245477/pexels-photo-7245477.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"/>
-      <Post title="Shortcut Travel Guide to Manhattan" img="https://images.pexels.com/photos/7078467/pexels-photo-7078467.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"/>
-      <Post title="Killer Actions to Boost Your Self-Confidence" img="https://images.pexels.com/photos/7833646/pexels-photo-7833646.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"/>
+      <Post title="NoDokter" img="img/noDokter-banner.png"/>
+      <Post title="ClassApp" img="img/ClassApp-banner.png"/>
+      <Post title="SlangTranslate" img="img/slangtranslate-banner.png"/>
+      <Post title="SelfWork" img="img/selfwork-banner.png"/>
+      <Post title="QuickInvites" img="img/quickinvites-banner.png"/>
+      <Post title="DOME" img="img/dome-banner.png"/>
+      <Post title="Education" img="img/education-banner.png"/>
+      <Post title="Flying Appa Simulator" img="img/appa-banner.png"/>
     </Container>
   );
 };
