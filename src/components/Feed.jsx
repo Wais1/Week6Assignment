@@ -41,6 +41,7 @@ const Feed = () => {
       <Post title="DOME" img="img/dome-banner.png"/>
       <Post title="Education" img="img/education-banner.png"/>
       <Post title="Flying Appa Simulator" img="img/appa-banner.png"/>
+      <Post title="TimeLine" img="img/timeline-banner.png"/>
     </Container>
   );
 };
