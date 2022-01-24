@@ -14,6 +14,7 @@ import {
   LinkedIn,
 } from "@material-ui/icons";
 import { Autocomplete } from "@material-ui/lab";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -54,6 +55,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       display: "none",
     },
+    marginLeft: 4,
   },
   profilePic: {
     [theme.breakpoints.down("md")]: {
@@ -64,12 +66,14 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: '200px',
     borderRadius:'7%',
     marginBottom: '15px',
+    marginLeft: 3,
   },
   myName: {
     [theme.breakpoints.down("md")]: {
       display: 'none',
     },
     marginBottom: '5px',
+    marginLeft: 3,
   },
   socialIcon: {
     padding: '10px 10px 10px 0px',
@@ -81,6 +85,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up("sm")]: {
       color: '#404040',
     },
+    marginLeft: 3,
   }
 }));
 
@@ -96,10 +101,12 @@ const Leftbar = () => {
       {/* Social Icons */}
       <a href="https://github.com/wais1" target="_blank"><GitHub className={classes.socialIcon}/></a>
       <a href="https://www.linkedin.com/in/waisibrahim/" target="_blank"><LinkedIn className={classes.socialIcon}/></a>
-      <div className={classes.item}>
-        <Home className={classes.icon} />
-        <Typography className={classes.text}>Homepage</Typography>
-      </div>
+      <Link to="/" style={{ textDecoration: 'none' }}>
+        <div className={classes.item}>
+        <Home className={classes.icon} /> 
+          <Typography className={classes.text}>Homepage</Typography>
+        </div>
+      </Link>
       <div className={classes.item}>
         <Person className={classes.icon} />
         <Typography className={classes.text}>Friends</Typography>

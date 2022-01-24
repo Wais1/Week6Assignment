@@ -38,7 +38,14 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "Helvetica",
     fontWeight: "bold",
     fontSize: 15
-  }
+  },
+  postTitle: {
+    fontWeight: 400,
+    fontSize: '30px'
+  },
+  postBody: {
+    fontSize: '16px'
+  },
 }));
 
 const Post = ({ img, title }) => {
@@ -49,12 +56,15 @@ const Post = ({ img, title }) => {
       <CardActionArea>
         <CardMedia className={classes.media} image={img} title="My Post" />
         <CardContent>
-          <Typography gutterBottom variant="h5">
+          <Typography gutterBottom variant="h5" className={classes.postTitle}>
             {title}
           </Typography>
-          <Typography variant="body2">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
-            consectetur earum est.
+          <Typography variant="body2" className={classes.postBody}>
+            Taco changes teams by measuring the deficiencies in active listening,
+             a central skill to collaboration that will engrain collaboration in any working culture.
+             We noticed that, thereby, the problem isn't understanding the importance of collaboration,
+             but reinforcing it as a habit, perpetuated by organizations that want the benefits of psychological
+             safety and an empathetic workplace.
           </Typography>
         </CardContent>
       </CardActionArea>

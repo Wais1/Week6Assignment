@@ -70,13 +70,28 @@ const useStyles = makeStyles((theme) => ({
   badge: {
     marginRight: theme.spacing(2),
   },
+  navItem: {
+    marginRight: theme.spacing(2),
+    background: 'transparent',
+    color: 'white',
+    boxShadow: '0px 0px 0px 0px',
+    '&:hover': {
+      boxShadow: '0px 0px 0px 0px',
+    },
+  },
+  contactButton: {
+    boxShadow: '0px 0px 0px 0px',
+    '&:hover': {
+      boxShadow: '0px 0px 0px 0px',
+    },
+  }
 }));
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const classes = useStyles({ open });
   return (
-    <AppBar position="fixed">
+    <AppBar elevation={0} position="fixed">
       <Toolbar className={classes.toolbar}>
         <Typography variant="h6" className={classes.logoLg}>
         <Link to="/" > <p style={{textDecoration: 'underline', textDecorationColor: 'white', color: 'white'}}>Wais Ibrahim  </p></Link> 
@@ -95,10 +110,12 @@ const Navbar = () => {
             className={classes.searchButton}
             onClick={() => setOpen(true)}
           />
-          <Link to="/about"><Button variant="contained" color="inherit">About Me</Button></Link>
-          <Button color="primary" variant="contained" size="large">
+          <Link style={{ textDecoration: 'none' }} to="/article"><Button variant="contained" color="inherit" className={classes.navItem}>Articles</Button></Link>
+          <Link style={{ textDecoration: 'none' }} to="/about"><Button variant="contained" color="inherit" className={classes.navItem}>About Me</Button></Link>
+          <Link style={{ textDecoration: 'none' }} to="/contact"> <Button color="primary" variant="contained" size="large" className={classes.contactButton}>
             Get In Touch
           </Button>
+          </Link>
         </div>
       </Toolbar>
     </AppBar>

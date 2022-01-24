@@ -15,6 +15,7 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: theme.spacing(12),
     position: "sticky",
     top: 0,
+    
   },
   title: {
     fontSize: 16,
