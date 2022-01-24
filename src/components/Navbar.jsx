@@ -22,13 +22,13 @@ const useStyles = makeStyles((theme) => ({
   },
   logoLg: {
     display: "none",
-    [theme.breakpoints.up("sm")]: {
+    [theme.breakpoints.up("md")]: {
       display: "block",
     },
   },
   logoSm: {
     display: "block",
-    [theme.breakpoints.up("sm")]: {
+    [theme.breakpoints.up("md")]: {
       display: "none",
     },
   },
@@ -40,10 +40,10 @@ const useStyles = makeStyles((theme) => ({
       backgroundColor: alpha(theme.palette.common.white, 0.25),
     },
     borderRadius: theme.shape.borderRadius,
-    width: "50%",
+    width: "300px",
     [theme.breakpoints.down("sm")]: {
       display: (props) => (props.open ? "flex" : "none"),
-      width: "70%",
+      width: "35%",
     },
     padding: 5,
     paddingLeft: 10,
@@ -53,13 +53,14 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: theme.spacing(1),
   },
   cancel: {
-    [theme.breakpoints.up("sm")]: {
+    [theme.breakpoints.up("md")]: {
       display: "none",
     },
   },
   searchButton: {
     marginRight: theme.spacing(2),
-    [theme.breakpoints.up("sm")]: {
+    marginLeft: theme.spacing(2),
+    [theme.breakpoints.up("md")]: {
       display: "none",
     },
   },
@@ -94,7 +95,7 @@ const Navbar = () => {
     <AppBar elevation={0} position="fixed">
       <Toolbar className={classes.toolbar}>
         <Typography variant="h6" className={classes.logoLg}>
-        <Link to="/" > <p style={{textDecoration: 'underline', textDecorationColor: 'white', color: 'white'}}>Wais Ibrahim  </p></Link> 
+        <Link to="/" style={{ textDecoration: 'none' }}> <p style={{color: 'white'}}>Wais Ibrahim  </p></Link> 
         </Typography>
         
         <Typography variant="h6" className={classes.logoSm}>
@@ -111,9 +112,9 @@ const Navbar = () => {
             onClick={() => setOpen(true)}
           />
           <Link style={{ textDecoration: 'none' }} to="/article"><Button variant="contained" color="inherit" className={classes.navItem}>Articles</Button></Link>
-          <Link style={{ textDecoration: 'none' }} to="/about"><Button variant="contained" color="inherit" className={classes.navItem}>About Me</Button></Link>
+          <Link style={{ textDecoration: 'none' }} to="/about"><Button variant="contained" color="inherit" className={classes.navItem}>About</Button></Link>
           <Link style={{ textDecoration: 'none' }} to="/contact"> <Button color="primary" variant="contained" size="large" className={classes.contactButton}>
-            Get In Touch
+            Contact
           </Button>
           </Link>
         </div>
